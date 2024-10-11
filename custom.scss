@@ -1,0 +1,28 @@
+$prefix: 'my-prefix-';
+$zindex-offcanvas: 1050;
+$offcanvas-horizontal-width: 300px;
+$offcanvas-vertical-height: 100vh;
+$offcanvas-padding-x: 1rem;
+$offcanvas-padding-y: 1rem;
+$offcanvas-color: #333;
+$offcanvas-bg-color: #fff;
+$offcanvas-border-width: 1px;
+$offcanvas-border-color: #ccc;
+$offcanvas-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$offcanvas-transition-duration: 0.3s;
+$offcanvas-title-line-height: 1.5;
+
+:root {
+  --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas};
+  --#{$prefix}offcanvas-width: #{$offcanvas-horizontal-width};
+  --#{$prefix}offcanvas-height: #{$offcanvas-vertical-height};
+  --#{$prefix}offcanvas-padding-x: #{$offcanvas-padding-x};
+  --#{$prefix}offcanvas-padding-y: #{$offcanvas-padding-y};
+  --#{$prefix}offcanvas-color: #{$offcanvas-color};
+  --#{$prefix}offcanvas-bg: #{$offcanvas-bg-color};
+  --#{$prefix}offcanvas-border-width: #{$offcanvas-border-width};
+  --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
+  --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
+  --#{$prefix}offcanvas-transition: #{$offcanvas-transition-duration} ease-in-out;
+  --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height};
+}

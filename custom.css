@@ -1,0 +1,16 @@
+:root {
+  --my-prefix-offcanvas-zindex: 1050;
+  --my-prefix-offcanvas-width: 300px;
+  --my-prefix-offcanvas-height: 100vh;
+  --my-prefix-offcanvas-padding-x: 1rem;
+  --my-prefix-offcanvas-padding-y: 1rem;
+  --my-prefix-offcanvas-color: #333;
+  --my-prefix-offcanvas-bg: #fff;
+  --my-prefix-offcanvas-border-width: 1px;
+  --my-prefix-offcanvas-border-color: #ccc;
+  --my-prefix-offcanvas-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --my-prefix-offcanvas-transition: 0.3s ease-in-out;
+  --my-prefix-offcanvas-title-line-height: 1.5;
+}
+
+/*# sourceMappingURL=custom.css.map */
