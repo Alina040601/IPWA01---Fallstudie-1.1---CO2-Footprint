@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    margin-left: 5px;
-    margin-right: 5px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -16,87 +14,171 @@ body {
 
 main {
     margin: 5%;
-    background-color: rgb(85, 149, 48);
+    background-color: rgb(149, 194, 58);
 }
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0 !important;
+}
+
+li {
+    margin: 0;
+    padding: 0;
 }
 
 i {
-    width: 100%;
-    height: auto;
-    color: rgb(85, 149, 48);
+    color: rgb(149, 194, 58);
+    opacity: 1;
 }
 
 i:hover {
-    color: rgb(30, 80, 0);
+    color: rgb(219, 180, 24);
 }
 
 #header-nav {
-    display: inline;
+    display: inline-block;
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    margin: 0;
 }
 
 #header-div {
-    background-color: white;
+    background-color: rgb(46, 64, 5);
 }
 
+#offcanvas-btn {
+    background-color: rgb(149, 194, 58);
+    border: none;
+    box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
+}
+
+#offcanvas-btn:hover {
+    background-color: rgb(219, 180, 24);
+    cursor: pointer;
+}
+
+#logo {
+    margin-left: 40px;
+    box-shadow: 1px 2px 8px 0px rgb(0, 0, 0);
+    padding-right: 3px;
+}
+
+#navbar-brand {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#navbar-brand:hover {
+    color: rgb(149, 194, 58);
+}
 #nav-links {
     display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 #nav-link {
     text-decoration: none;
+    box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
 }
 
 #searchbar {
     margin-left: auto;
     display: inline-block;
     width: 40%;
+    box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
+
 }
 
 #search-btn {
-    background-color: rgb(85, 149, 48);
+    background-color: rgb(149, 194, 58);
     color: white;
+    border: none;
+    box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
 }
 
-#offcanvas-btn {
-    background-color: rgb(85, 149, 48);
-    border: 2px solid rgb(85, 149, 48);
+#search-btn:hover {
+    background-color: rgb(219, 180, 24);
+    cursor: pointer;
+}
+
+#offcanvasWithBothOptions {
+    background-color: rgb(46, 64, 5);
+    margin: 0;
+    padding: 0;
+}
+
+#offcanvas-header {
+    position: relative;
+    border-bottom: 5pt solid rgb(149, 194, 58);
+    padding:0;
+}
+
+#menu-logo {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    padding-right: 8px;
+}
+
+#close-btn {
+    --bs-btn-close-bg: none;   
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 0;
+    opacity: 0.8;
+}
+
+#close-btn:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#menu {
+    display: block;
+    padding: 0;
+    margin: 20px;
 }
 
 #menu-links {
-    display: block;
-    padding-bottom: 10px;
-    padding-left: 0px;
+    padding: 0;
 }
 
 #menu-link {
     display: block;
     text-decoration: none;
-    color: black;
+    color: white;
+    padding: 10px;
 }
 
 #menu-link:hover {
-    background-color: rgb(85, 149, 48);
+    background-color: rgb(219, 180, 24);
 }
 
-#footer-div {
-    background-color: white;
+#main-content {
+    display: inline-block;
+    margin: 85px;
 }
+
+#footer-nav {
+    background-color: rgb(46, 64, 5) !important;
+    z-index: 1000;
+}
+
 #footer-links {
     display: inline-block;
+    margin-left: auto;
 }
 
 #footer-link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #footer-link:hover {
-    color: rgb(85, 149, 48);
+    color: rgb(94, 131, 18);
 }
