@@ -1,7 +1,5 @@
+/* Reset any default padding and margin */
 * {
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -13,7 +11,7 @@ body {
 
 #main-content {
     padding: 80px 29px 10px 29px;
-    background-color: rgb(149, 194, 58);
+    background-color: white;
     line-height: 1,5em;
     font-size: large;
 }
@@ -32,10 +30,11 @@ i:hover {
 }
 
 #header-nav {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0;
+    margin: 0;
 }
 
 #header-div {
@@ -46,6 +45,7 @@ i:hover {
     background-color: rgb(149, 194, 58);
     border: none;
     box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
+    margin-inline-start: 10px;
 }
 
 #offcanvas-btn:hover {
@@ -54,7 +54,7 @@ i:hover {
 }
 
 #logo {
-    margin-left: 40px;
+    margin-inline-start: 40px;
     box-shadow: 1px 2px 8px 0px rgb(0, 0, 0);
     padding-right: 3px;
 }
@@ -69,9 +69,10 @@ i:hover {
     color: rgb(149, 194, 58);
 }
 #nav-links {
-    display: inline-block;
-    margin-right: 20px;
-    margin-left: 20px;
+    display: flex;
+    gap: 1rem;
+    margin-inline-end: 20px;
+    margin-inline-start: 20px;
 }
 
 #nav-link {
@@ -79,23 +80,25 @@ i:hover {
     box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
 }
 
-#searchbar {
-    margin-left: auto;
-    display: inline-block;
-    width: 40%;
-    box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
+/* Logical property for margin-left in LTR and margin-right in RTL */
 
+
+#searchbar {
+    display: flex;
+    gap: 0.5rem;
+    margin-inline-start: auto;
+    width: 40%;
 }
 
 #search-btn {
     background-color: rgb(149, 194, 58);
     color: white;
     border: none;
-    box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #search-btn:hover {
-    background-color: rgb(219, 180, 24);
+    background-color: rgb(94, 131, 18);
     cursor: pointer;
 }
 
@@ -103,10 +106,14 @@ i:hover {
     background-color: rgb(46, 64, 5);
     margin: 0;
     padding: 0;
+    opacity: 0.95;
 }
 
 #offcanvas-header {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 5pt solid rgb(149, 194, 58);
     padding:0;
 }
@@ -121,8 +128,8 @@ i:hover {
 #close-btn {
     --bs-btn-close-bg: none;   
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 10px;
+    inset-inline-end: 10px; /* Logical property for right in LTR and left in RTL */
     padding: 0;
     opacity: 0.8;
 }
@@ -150,7 +157,7 @@ i:hover {
 }
 
 #menu-link:hover {
-    background-color: rgb(219, 180, 24);
+    background-color: rgb(149, 194, 58);
 }
 
 #footer-nav {
@@ -161,7 +168,8 @@ i:hover {
 
 #footer-links {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: center;
     margin: 15px;
     padding: 0;
 }
