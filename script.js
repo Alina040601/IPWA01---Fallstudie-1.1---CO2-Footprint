@@ -1,15 +1,20 @@
-function setDirection(direction) {
-    document.documentElement.setAttribute('dir', direction);
+const offcanvas = document.getElementById("menu");
+
+const menuButton = document.getElementById("offcanvas-btn");
+    menuButton.addEventListener("click", menuClick);
+
+function menuClick() {
+        console.log("menu clicked");
 }
 
-// Example usage: set direction to RTL
-setDirection('rtl');
-
-// Example usage: set direction to LTR
-setDirection('ltr');
-
-if (document.documentElement.getAttribute('dir') === 'rtl') {
-    function setDirectionToLTR() {
-        document.documentElement.setAttribute('dir', 'ltr');
+const language = navigator.language;
+console.log(language);
+function getLanguage() {
+    navigator.language;
+    returnLanguage();
+    function returnLanguage() {
+        if (language === "de-DE") {
+            console.log("Deutsch");
+        }
     }
 }

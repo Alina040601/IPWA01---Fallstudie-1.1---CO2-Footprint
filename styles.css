@@ -1,4 +1,3 @@
-/* Reset any default padding and margin */
 * {
     font-style: normal;
 }
@@ -80,9 +79,6 @@ i:hover {
     box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
 }
 
-/* Logical property for margin-left in LTR and margin-right in RTL */
-
-
 #searchbar {
     display: flex;
     gap: 0.5rem;
@@ -106,7 +102,6 @@ i:hover {
     background-color: rgb(46, 64, 5);
     margin: 0;
     padding: 0;
-    opacity: 0.95;
 }
 
 #offcanvas-header {
@@ -129,7 +124,7 @@ i:hover {
     --bs-btn-close-bg: none;   
     position: absolute;
     top: 10px;
-    inset-inline-end: 10px; /* Logical property for right in LTR and left in RTL */
+    inset-inline-end: 10px;
     padding: 0;
     opacity: 0.8;
 }
