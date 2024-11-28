@@ -9,34 +9,49 @@ function onPageload() {
     const userLanguage = getLanguage();
     console.log("Browser language is set to:", userLanguage);
 
-if (userLanguage === "de-DE") {
-    changeCSSVariable();
+        if (userLanguage === "de-DE") {
+            changeCSSVariable();
+        }
+
+        else {
+            console.log("No changes made to CSS variables");
+
+        }
 }
 
-else {
-    console.log("No changes made to CSS variables");
-
-}
-}
-
-const offcanvasStart = document.querySelector(".offcanvas.offcanvas-start");
-const offcanvasStartShow = document.querySelector(".offcanvas.offcanvas-start.show");
-const offcanvasStartShowing = document.querySelector(".offcanvas.offcanvas-start.showing");
-const offcanvasStartHidig = document.querySelector(".offcanvas.offcanvas-start.hiding");
+const offcanvasStart = document.querySelector('.offcanvas.offcanvas-start');
+const offcanvasStartShow = document.querySelector('.offcanvas.offcanvas-start.show');
+const offcanvasStartShowing = document.querySelector('.offcanvas.offcanvas-start.showing');
+const offcanvasStartHiding = document.querySelector('offcanvas.offcanvas-start.show.hiding');
 
 function changeCSSVariable() {
-    if (offcanvasStart) {
+    
         offcanvasStart.style.right = "0";
         offcanvasStart.style.transform = "translateX(+100%)";
-        offcanvasStart.style.transition = "ease-in-out 0.5s";
-    }
-    if (offcanvasStartShow) {
+
+        offcanvasStartShowing.style.transform = "translateX(0)";    
+
         offcanvasStartShow.style.transform = "translateX(0)";
+
+        offcanvasStartHiding.style.transform = "translateX(+100%)";
     }
-    if (offcanvasStartShowing) {
-        offcanvasStartShowing.style.transform = "translateX(0)";
+
+document.addEventListener('DOMContentLoaded', () => {
+    const offcanvasElement = document.querySelector('.offcanvas.offcanvas-start');
+
+    if (offcanvasStartShow) {
+        // Listen for when the offcanvas is fully shown
+        offcanvasStartShow.addEventListener('shown.bs.offcanvas', () => {
+            console.log('Offcanvas is now shown.');
+            offcanvasStartShow.style.transform = 'translateX(0)';
+        });
+
+        // Listen for when the offcanvas is fully hidden
+        offcanvasStartHiding.addEventListener('hidden.bs.offcanvas', () => {
+            console.log('Offcanvas is now hidden.');
+            offcanvasStartHiding.style.transform = 'translateX(+100%)';
+        });
     }
-    if (offcanvasStartHidig) {
-        offcanvasStartHidig.style.transform = "translateX(+100%)";
-    }
-}
+});    
+
+const hn = ".bs.modal"
