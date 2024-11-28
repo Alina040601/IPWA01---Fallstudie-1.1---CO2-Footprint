@@ -67,6 +67,7 @@ i:hover {
 #navbar-brand:hover {
     color: rgb(149, 194, 58);
 }
+
 #nav-links {
     display: flex;
     gap: 1rem;

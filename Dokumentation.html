@@ -45,5 +45,7 @@ It suggested to add the "dir" attribute to the html tag and to use "margine-inli
 GitHub Copilot didn't correct all "margin-left/Padding-left" and "margin-right"/"padding-right" values in the CSS, so I had to adjust them manually
 it also suggested using the "flex" attribute for better responsiveness.
 It also changed the colors of the footer so I had to adjust them manually.
+It didnt apply to the position of the offcanvas menu.
 
-made Offcanvas responsive by
+Figured out which properties of which elements need to be changed in order to display offcanvas on the right side of the screen instead of the left side by ispecting the elements in the browser and figuring out the names of the classes that I need to adress. Then I used strg+F to find them in the bootstrap CSS Quellcode and tested by overriding the values of the properties in my CSS file.
+Then I tried to find out how I can change these properties with javascript, so that they would only be changed if the Schriftkultur is rtl. I used an onPageLoad function with a getLanguage function to find out the Language of the users Browser. Then I created an if function, that only calls the changeCSSVariable function, if the returned language is one with rtl as the default Schriftkultur. The only Problem is that the changeCSSVariable function doesn´t work properly yet.
