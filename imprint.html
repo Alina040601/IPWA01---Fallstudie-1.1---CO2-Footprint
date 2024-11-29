@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de-DE" dir="ltr">
   <head>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script> 
@@ -13,6 +13,23 @@
         <div id="header-div" class="container-fluid">
             <button id="offcanvas-btn" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menü</button>
                 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div id="offcanvas-header" class="offcanvas-header">
+                        <img id="menu-logo" src="co2-neutral-7139834_1920.png" alt="Logo" width="60" 
+                            height="34" id="offcanvasScrollingLabel" href="index.html">
+                        
+                        <button id="close-btn" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i></button>
+                    </div>
+                <div id="menu" class="offcanvas-body">
+                    <ul id="menu-links">
+                        <li><a id="menu-link" href="index.html">HOME <i id="i-menu" class="fa-solid fa-house fa-lg" style="color: #2e4005;"></i></a></li>
+                        <li><a id="menu-link" href="CO2.html">WAS IST CO2 <i id="i-menu" class="fa-solid fa-question fa-xl" style="color: #2e4005;"></i></a></li>
+                        <li><a id="menu-link" href="footprint.html">DER  GLOBALE CO2 FOOTPRINT <i id="i-menu" class="fa-solid fa-shoe-prints fa-lg" style="color: #2e4005;"></i></a></li>
+                        <li><a id="menu-link" href="CO2-neutral.html">CO2-NEUTRAL WERDEN <i id="i-menu" class="fa-solid fa-leaf fa-lg" style="color: #2e4005;"></i></a></li>
+                    </ul>                
+                </div>
+                </div>
+                <button id="offcanvas-btn-rtl" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Menü</button>
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div id="offcanvas-header" class="offcanvas-header">
                         <img id="menu-logo" src="co2-neutral-7139834_1920.png" alt="Logo" width="60" 
                             height="34" id="offcanvasScrollingLabel" href="index.html">
