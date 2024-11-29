@@ -41,6 +41,7 @@ i:hover {
 }
 
 #offcanvas-btn {
+    visibility: visible;
     background-color: rgb(149, 194, 58);
     border: none;
     box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
@@ -48,6 +49,20 @@ i:hover {
 }
 
 #offcanvas-btn:hover {
+    background-color: rgb(219, 180, 24);
+    cursor: pointer;
+}
+
+#offcanvas-btn-rtl {
+    position: absolute;
+    visibility: hidden;
+    background-color: rgb(149, 194, 58);
+    border: none;
+    box-shadow: 5px 5px 5px 0px rgb(30, 41, 3);
+    margin-inline-start: 10px;
+}
+
+#offcanvas-btn-rtl:hover {
     background-color: rgb(219, 180, 24);
     cursor: pointer;
 }
@@ -100,6 +115,12 @@ i:hover {
 }
 
 #offcanvasWithBothOptions {
+    background-color: rgb(46, 64, 5);
+    margin: 0;
+    padding: 0;
+}
+
+#offcanvasRight {
     background-color: rgb(46, 64, 5);
     margin: 0;
     padding: 0;

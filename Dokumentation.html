@@ -49,3 +49,6 @@ It didnt apply to the position of the offcanvas menu.
 
 Figured out which properties of which elements need to be changed in order to display offcanvas on the right side of the screen instead of the left side by ispecting the elements in the browser and figuring out the names of the classes that I need to adress. Then I used strg+F to find them in the bootstrap CSS Quellcode and tested by overriding the values of the properties in my CSS file.
 Then I tried to find out how I can change these properties with javascript, so that they would only be changed if the Schriftkultur is rtl. I used an onPageLoad function with a getLanguage function to find out the Language of the users Browser. Then I created an if function, that only calls the changeCSSVariable function, if the returned language is one with rtl as the default Schriftkultur. The only Problem is that the changeCSSVariable function doesn´t work properly yet.
+
+
+Came to the conclusion that it is much easier to add another offcanvas menu to the right side with help of bootstrap. The button is set to be hidden by default and only appears if the Schriftkultur of the corresponding Browser language is rtl. The regular offcanvas button behaves the exact opposite way, it is visible by default and hidden if the Browser languages has an rtl Schriftkultur.
