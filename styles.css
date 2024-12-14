@@ -246,6 +246,8 @@ i:hover {
     padding: 0;
 }
 
+
+/* Smartphones < 385px */
 @media (max-width: 385px) {
 
     #main-content {
@@ -371,6 +373,7 @@ i:hover {
     }
 }
 
+/* Smartphones ≥386px und <575px */
 @media (min-width: 386px) and (max-width: 575px){
 
     #main-content {
@@ -482,7 +485,6 @@ i:hover {
         height: 20px;
     }
 }
-
 
 /* Tablets ≥576px und <767px */
 @media (min-width: 576px) and (max-width: 767px) {
