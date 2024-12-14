@@ -4,7 +4,7 @@
 
 body {
     width: 100%;
-    line-height: 2em !important;
+    line-height: normal !important;
 }
 
 #main-content {
@@ -17,6 +17,8 @@ body {
 
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 i {
@@ -28,6 +30,13 @@ i:hover {
     color: rgb(219, 180, 24);
 }
 
+#header-div {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(46, 64, 5);
+    font-size: large;
+}
+
 #header-nav {
     width: 100%;
     display: flex;
@@ -36,13 +45,6 @@ i:hover {
     align-items: center;
     padding: 0;
     margin: 0;
-}
-
-#header-div {
-    width: 100%;
-    height: 60px;
-    background-color: rgb(46, 64, 5);
-    font-size: large;
 }
 
 #offcanvas-btn {
@@ -190,20 +192,33 @@ i:hover {
     background-color: rgb(149, 194, 58);
 }
 
+#i-menu {
+    color: rgb(46, 64, 5) !important;
+}
+
+#footer-div {
+    display: flex;
+        width: 100%;
+        height: 60px;
+        background-color: rgb(46, 64, 5);
+        font-size: large;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0;
+}
+
 #footer-nav {
     display: flex;
     width: 100%;
     height: 60px;
     background-color: rgb(46, 64, 5) !important;
-    z-index: 1000;
 }
 
 #footer-links {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin: 15px;
+    justify-content: space-evenly;
     padding: 0;
+    margin: 0;
 }
 
 #footer-link {
@@ -217,18 +232,21 @@ i:hover {
 }
 
 #footer-img {
-    width: 100%;
-    height: 4%;
+    width:400px;
+    height: 2px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
 }
 
 #seperator-img {
-    width: 4%;
-    height: 50%;
-    margin: 0;
+    width: 2px;
+    height: 20px;
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
     padding: 0;
 }
 
-@media (min-width: 320px) and (max-width: 385px) {
+@media (max-width: 385px) {
 
     #main-content {
         padding: 60px 29px 10px 29px;
@@ -303,12 +321,53 @@ i:hover {
         height: 30px;
     }
 
+    #search-input {
+        font-size: small;
+        padding: 5px;
+    }
+
     #search-btn {
         width: 60px;
         height: 30px;
         font-size: x-small;
         padding: 0;
         box-shadow: none;
+    }
+
+    #offcanvasWithBothOptions {
+        max-width: 100%;
+        font-size: small;
+    }
+
+    #offcanvasRight {
+        font-size: small;
+    }
+
+    #i-menu {
+        color: rgb(149, 194, 58) !important;
+    }
+
+    #footer-div {
+        height: 40px;
+        font-size: small;
+        align-items: center;
+        min-width: fit-content;
+    }
+
+    #footer-nav {
+        font-size: small;
+        height: 40px;
+        align-items: center;
+    }
+
+    #footer-img {
+       visibility: hidden;
+       display: none;
+    }
+
+    #seperator-img {
+        width: 2px;
+        height: 20px;
     }
 }
 
@@ -329,7 +388,7 @@ i:hover {
     #offcanvas-btn {
         width: 70px;
         height: 30px;
-        font-size: medium;
+        font-size: small;
         padding: 0;
         box-shadow: none;
     }
@@ -342,10 +401,19 @@ i:hover {
         box-shadow: none;
     }
 
+    #menu-link:hover {
+    background-color: rgb(46, 64, 5) !important;
+    color: rgb(219, 180, 24);
+    }
+
+    #i-menu {
+        color: rgb(149, 194, 58) !important;
+    }
+
     #logo {
         width: 70px;
         height: 40px;
-        margin-inline-start: 20px;
+        margin-inline-start: 15px;
         margin-inline-end: 10px;
     }
     
@@ -367,18 +435,51 @@ i:hover {
 
     #search-input {
         font-size: small;
+        padding: 5px;
     }
 
     #search-btn {
         width: 100px;
         height: 30px;
-        font-size: medium;
+        font-size: small;
         padding: 0;
         box-shadow: none;
     }
 
+    #offcanvasWithBothOptions {
+        max-width: 70%;
+        font-size: medium;
+    }
+
+    #offcanvasRight {
+        max-width: 70%;
+        font-size: medium;
+    }
+
+    #i-menu {
+        color: rgb(149, 194, 58) !important;
+    }
+
+    #footer-div {
+        height: 40px;
+        font-size: medium;
+        align-items: center;
+        min-width: fit-content;
+    }
+
     #footer-nav {
         font-size: medium;
+        height: 40px;
+    }
+
+    #footer-img {
+       visibility: hidden;
+       display: none;
+    }
+
+    #seperator-img {
+        width: 2px;
+        height: 20px;
     }
 }
 
@@ -393,13 +494,7 @@ i:hover {
         font-size: medium;
     }
 
-    #header-div {
-        height: 40px;
-    }
-
     #logo {
-        width: 70px;
-        height: 40px;
         margin-top: 0;
         margin-bottom: 0;
         margin-inline-start: 10px;
@@ -410,63 +505,46 @@ i:hover {
     #navbar-brand {
         color: white;
         text-decoration: none;
-        font-size: small;
-        margin-right: 0;
+        font-size: medium;
+        margin: 0;
     }
 
     #searchbar {
-        width: 40%;
+        width: 60%;
     }
 
-    #footer-nav {
-        height: 40px;
-        align-items: center;
+    #offcanvasWithBothOptions {
+        max-width: 60%;
+        font-size: medium;
+    }
+
+    #offcanvasRight {
+        max-width: 60%;
+        font-size: medium;
+    }
+
+    #i-menu {
+        color: rgb(149, 194, 58) !important;
     }
 }
 
 /* Tablets, ≥768px und < 991px */
 @media (min-width: 768px) and (max-width: 991px) {
-    *{   
-        font-size: small;
-    }
 
     #header-div {
-        height: 40px;
+        height: 60px;
+        margin-inline-start: 0;
     }
 
-    #logo {
-        width: 70px;
-        height: 40px;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-inline-start: 20px;
-        margin-inline-end: 20px;
-        padding-inline-end: 3px;
-    }
-    
-    #navbar-brand {
-        color: white;
-        text-decoration: none;
-        font-size: medium;
-        margin-right: 0;
-    }
-
-    #searchbar {
-        width: 40%;
-    }
-
-    #footer-nav {
-        height: 40px;
-        align-items: center;
+    #i-menu {
+        color: rgb(149, 194, 58) !important;
     }
 }
 
-                                                                                /* Large devices (desktops, 992px and up) */
-                                                                                @media (min-width: 992px) and (max-width: 1199px) {
-                                                                                    /* Styles for desktops */
-                                                                                }
+/* Desktops, ≥1400px */
+@media (min-width: 1400px) {
 
-                                                                                /* Extra large devices (large desktops, 1200px and up) */
-                                                                                @media (min-width: 1200px) {
-                                                                                    /* Styles for large desktops */
-                                                                                }
+    #footer-img {
+        width:500px;
+    }
+}
