@@ -10,7 +10,8 @@ body {
 #main-content {
     width: 100%;
     padding: 80px 29px 10px 29px;
-    background-color: white;
+    background-color: rgb(149, 194, 58);
+    color: white;
     line-height: 1.5em;
     font-size: large;
 }
@@ -19,6 +20,10 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+a {
+    color: white !important;
 }
 
 i {
@@ -30,6 +35,9 @@ i:hover {
     color: rgb(219, 180, 24);
 }
 
+p {
+    color: rgb(46, 64, 5);
+}
 #header-div {
     width: 100%;
     height: 60px;
@@ -244,6 +252,15 @@ i:hover {
     margin-inline-start: 15px;
     margin-inline-end: 15px;
     padding: 0;
+}
+
+#table-div {
+    margin-inline-start: 60px;
+    margin-inline-end: 60px;
+}
+
+#table {
+    border-collapse: unset;
 }
 
 
