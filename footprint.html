@@ -54,7 +54,7 @@
                 <div id="nav-div">
                 </div>
             <form id="searchbar" class="d-flex" role="search">
-                <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input id="search-input" class="form-control me-2" type="search" placeholder="Suche..." aria-label="Search">
                 <button id="search-btn" class="btn btn-outline-success" type="submit">Suche</button>
             </form>
         </div>
@@ -65,16 +65,69 @@
     <main id="main-content">
         <h1>Der Globale CO2-Footprint</h1>
         <br><br>
+        <div id="filter-div">
+            <div id="input-div">
+                <input id="table-input" class="form-control" type="text" placeholder="Nach Land oder Unternehmen filtern...">
+            </div>
+        </div>
         <div id="table-div" class="table-responsive">
             <table id="table" class="table table-sm table-striped-columns">
                 <thead class="table">
                         <tr align="center">
-                            <th scope="col">Rang</th>
-                            <th scope="col">Land</th>
-                            <th scope="col">Ökologischer Fußabdruck(gha/Person)</th>
-                            <th scope="col">Gesamtemissionen (Mio. Tonnen/Jahr)</th>
-                            <th scope="col">Unternehmen</th>
-                            <th scope="col">Unternehmensanteil an den Emissionen</th>
+                            <th col-index=1 scope="col">
+                                <div id="caption-div">Rang
+                                        <select id="sort" class="form-select">
+                                            <option selected></option>
+                                            <option value="1">Aufsteigend</option>
+                                            <option value="2">Absteigend</option>
+                                        </select>
+                                </div>
+                            </th>
+                            <th col-index=2 scope="col">
+                                <div id="caption-div">Land
+                                    <select id="sort" class="form-select">
+                                        <option selected></option>
+                                        <option value="1">A-Z</option>
+                                        <option value="2">Z-A</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th col-index=3 scope="col">
+                                <div id="caption-div">Ökologischer Fußabdruck(gha/Person)
+                                    <select id="sort" class="form-select">
+                                        <option selected></option>
+                                        <option value="1">Aufsteigend</option>
+                                        <option value="2">Absteigend</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th col-index=4 scope="col">
+                                <div id="caption-div">Gesamtemissionen (Mio. Tonnen/Jahr)
+                                    <select id="sort" class="form-select">
+                                        <option selected></option>
+                                        <option value="1">Aufsteigend</option>
+                                        <option value="2">Absteigend</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th col-index=5 scope="col">
+                                <div id="caption-div">Unternehmen
+                                    <select id="sort" class="form-select">
+                                        <option selected></option>
+                                        <option value="1">A-Z</option>
+                                        <option value="2">Z-A</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th col-index=6 scope="col">
+                                <div id="caption-div">Unternehmensanteil an den Emissionen
+                                    <select id="sort" class="form-select">
+                                        <option selected></option>
+                                        <option value="1">Aufsteigend</option>
+                                        <option value="2">Absteigend</option>
+                                    </select>
+                                </div>
+                            </th>
                         </tr>
                       </thead>
                       <tbody class="table-group-divider">
