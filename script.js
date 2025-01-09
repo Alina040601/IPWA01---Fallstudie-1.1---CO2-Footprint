@@ -29,6 +29,6 @@ function onPageload() {
     }
 }
 
-//array of unique values in columns
-
-{1 : ["1", "2", "3", "4", "5", "6", "7", "8"], 2 : ["Nordland", "Westania", "Luxoria", "Industrien", "Techland", "Southopia", "Emissivia", "Ostlandia"], 3 : ["12,5", "11,9", "10,3", "9,8", "9,3", "8,7", "8,2", "7,5"], 4 : ["1.200", "1.100", "950", "920", "900", "870", "850", "750"] 5 : [], 6 : []]
+  $(document).ready(function () {
+    $('#table').DataTable();
+  });
